@@ -1,4 +1,5 @@
 import React from 'react';
+import Search from './components/Search';
 
 function App() {
   return (
@@ -6,6 +7,9 @@ function App() {
       <header>
         <h1>Movie App</h1>
       </header>
+      <main>
+        <Search />
+      </main>
     </div>
   );
 }
