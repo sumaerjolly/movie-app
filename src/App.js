@@ -14,7 +14,12 @@ function App() {
     if (e.key === 'Enter') {
       axios
         .get(`${apiUrl}&s=${state.searchQuery}`)
-        .then(response => console.log(response))
+        .then(({ data }) => {
+          let results = data.Search;
+          setState(prevState => {
+            return { ...prevState, results };
+          });
+        })
         .catch(error => console.log('api error is', error));
     }
   };
@@ -25,6 +30,8 @@ function App() {
       return { ...prevState, searchQuery };
     });
   };
+
+  console.log(state.results);
 
   return (
     <div className="App">
