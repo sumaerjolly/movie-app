@@ -1,6 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { MoviesContext } from '../MoviesContext';
 
-function Popup({ selected, closePopup }) {
+function Popup() {
+  const { state, closePopup } = useContext(MoviesContext);
+  const selected = state.selected;
+
   return (
     <section className="popup">
       <div className="content">

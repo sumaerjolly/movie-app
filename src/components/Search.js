@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { MoviesContext } from '../MoviesContext';
 
-function Search({ handleInput, search }) {
+function Search() {
+  const { handleInput, search } = useContext(MoviesContext);
+
   return (
     <section className="searchbox-wrap">
       <input
