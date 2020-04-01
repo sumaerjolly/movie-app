@@ -2,6 +2,10 @@
 
 This is a Movie App I built using omdb API. I built this for fun and to improve my react skills so I can search for Movies and see their rating. I will add a watchlist feature soon as well.
 
+## Built With
+
+React 
+
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
